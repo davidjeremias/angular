@@ -10,6 +10,7 @@ import { ContatoEntity } from '../entity/contato';
 export class ContatosInsercaoComponent implements OnInit {
 
   pessoa = new ContatoEntity();
+  p: ContatoEntity;
   
   constructor(private contatosService: ContatosService) { }
 
@@ -17,7 +18,7 @@ export class ContatosInsercaoComponent implements OnInit {
   }
 
   salvar(){
-    this.contatosService.salvar(this.pessoa);
+    this.contatosService.salvar(this.pessoa).subscribe(dados => this.p = dados);
   }
 
 }

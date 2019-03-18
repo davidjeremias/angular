@@ -16,9 +16,9 @@ export class ContatosService {
     return this.http.get<ContatoEntity[]>(this.contatosURL);
   }
 
-  salvar(pessoa: ContatoEntity){
+  salvar(pessoa: ContatoEntity): Observable<ContatoEntity>{
     console.log(pessoa);
-    return this.http.post(this.contatosURL, pessoa);
+    return this.http.post<ContatoEntity>(this.contatosURL, pessoa);
   }
 
  
