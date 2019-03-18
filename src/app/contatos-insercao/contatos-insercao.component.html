@@ -1,0 +1,23 @@
+<h3>Inserção</h3>
+
+<hr>
+<br>
+
+  <div class="container">
+  <div class="form-group">
+      <span class="ui-float-label">
+          <input id="float-input" type="text" size="30" [(ngModel)]="pessoa.nome" pInputText> 
+          <label for="float-input">Nome</label>
+      </span>
+    <small id="nomeHelp" class="form-text text-muted">Digite o nome do contato.</small>
+  </div>
+  <div class="form-group">
+      <span class="ui-float-label">
+          <input id="float-input" type="text" size="30" [(ngModel)]="pessoa.email" pInputText> 
+          <label for="float-input">Email</label>
+      </span>
+    <small id="emailHelp" class="form-text text-muted">Digite o email do contato.</small>
+  </div>
+ 
+  <button type="submit" class="btn btn-primary" (click)="salvar()" pButton>Salvar</button>
+</div>
